@@ -10,6 +10,10 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
         body: JSON.stringify({
             message: 'Hello world',
             input: event,
-        })
+        }),
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Methods": "OPTIONS,POST"
+        }
     }
 }
